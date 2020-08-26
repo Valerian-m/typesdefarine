@@ -1,0 +1,209 @@
+@charset 'utf-8'
+
+@import 'framework/bulma/sass/utilities/_all'
+@import 'framework/bulma/sass/base/_all'
+@import 'framework/bulma/sass/grid/_all'
+@import 'framework/bulma/sass/elements/image'
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap&text=%E2%86%92')
+
+::selection 
+  background-color: #423fe2
+  color: #ffffff
+
+html
+  font-size: 16px
+  scroll-behavior: smooth
+  &[data-scroll='0%']
+    body
+      background-color: #FAD376
+  &[data-scroll='20%']
+    body
+      background-color: #FBDE99
+  &[data-scroll='40%']
+    body
+      background-color: #FCE9BA
+  &[data-scroll='60%']
+    body
+      background-color: #FEF3DA
+  &[data-scroll='80%']
+    body
+      background-color: #FFFFFF
+  @media screen and (prefers-reduced-motion: reduce)
+    scroll-behavior: auto
+
+body
+  background-color: #FAD376
+  font-family: 'Alegreya', serif
+  color: #121212
+  transition: background-color 3600ms 1600ms ease-in-out
+
+  //font-family: 'Alegreya Sans', sans-serif
+
+.background-top
+  position: absolute
+  height: 1049px
+  left: 0
+  right: 0
+  top: 0
+  background: linear-gradient(180deg, #FDB200 0%, rgba(253, 178, 0, 0) 100%)
+
+.contains-and-centers-article-content
+  position: relative
+  max-width: 672px
+  margin: 0 auto
+  @include mobile
+    padding: 0 16px
+
+header
+  margin-bottom: 32px
+  h4
+    font-weight: 700
+    font-size: 1rem
+    line-height: 32px
+    text-align: center
+    margin: 30px 0 13px
+
+h2
+  font-weight: 700
+  font-size: 1.75rem
+  line-height: 35px
+  margin-bottom: 16px
+
+h3
+  font-weight: bold
+  font-size: 1.125rem
+  line-height: 35px
+  font-variant: small-caps
+  margin-bottom: 8px
+
+p
+  font-weight: 400
+  font-size: 1.5rem
+  line-height: 35px
+  margin-bottom: 16px
+  @include mobile
+    font-size: 1.1875rem
+    line-height: 28px
+
+  &.boxed-fact
+    font-size: 1.375rem
+    line-height: 33px
+    box-sizing: border-box
+    padding: 24px
+    @include mobile
+      font-size: 1.125rem
+      line-height: 26px
+
+  &.fun-fact
+    background: #FFE096
+    border: 3px solid rgba(253, 178, 0, 0.5)
+    box-shadow: -4px 4px 0px rgba(103, 100, 255, 0.5)
+
+  &.important-fact
+    background: #FFFFFF
+    border: 3px solid #1FA85B
+    box-shadow: -6px 6px 0px #FDB200, 3px -3px 0px #F15A38, 6px 9px 0px #6764FF
+
+a
+  display: inline-block
+  position: relative
+  color: #423FE1
+  transition: all 220ms
+  &::after
+    content: ""
+    position: absolute
+    bottom: 5px
+    display: block
+    width: 100%
+    height: 1px
+    background-color: transparent
+    transition: all 140ms
+  &:hover
+    color: #D63914
+    &::after
+      background-color: #1FA85B
+
+sup
+  font-weight: 700
+  display: inline-block
+  vertical-align: baseline
+  transform: translateY(-7px)
+
+  a
+    &::after
+      background-color: transparent
+    &::before
+      content: ""
+      position: absolute
+      top: 15%
+      left: -100%
+      display: block
+      width: 300%
+      height: 80%
+      background-color: transparent
+    &:hover
+      &::after
+        background-color: transparent
+
+ol,
+.author-contact
+  font-size: 1rem
+  line-height: 24px
+  list-style-position: inside
+
+  li
+    margin-bottom: 4px
+    padding: 6px 8px
+    box-shadow: 0 0 0 2px transparent, -4px 4px 0 0 transparent, 2px -2px 0 0 transparent
+    background-color: rgba(255, 255, 255, 0)
+
+    &:target
+      animation: highlight-note 2000ms 700ms
+
+  a
+    display: inline
+    text-decoration: underline
+    text-decoration-color: transparent
+    &::after
+      content: none
+      display: none
+    &:hover
+      text-decoration-color: #1FA85B
+
+.wider-bottom-gap
+  margin-bottom: 48px
+  @include mobile
+    margin-bottom: 36px
+
+.text-underlined
+  text-decoration: underline
+  &.yellow
+    text-decoration-color: #FDB200
+  &.purple
+    text-decoration-color: #423FE1
+  &.green
+    text-decoration-color: #1FA85B
+
+.author-contact
+  span
+    font-size: 1.375rem
+    color: #423FE1
+
+@keyframes highlight-note
+  0%
+   box-shadow: 0 0 0 2px transparent, -4px 4px 0 0 transparent, 2px -2px 0 0 transparent
+   background-color: rgba(255, 255, 255, 0)
+  50%
+   box-shadow: 0 0 0 2px #ffffff, -4px 4px 0 2px #feb200, 2px -2px 0 2px #f15a38
+   background-color: rgba(255, 255, 255, 0.12)
+  80%
+   box-shadow: 0 0 0 2px #ffffff, -4px 4px 0 2px #feb200, 2px -2px 0 2px #f15a38
+   background-color: rgba(255, 255, 255, 0.12)
+  100%
+   box-shadow: 0 0 0 2px transparent, -4px 4px 0 0 transparent, 2px -2px 0 0 transparent
+   background-color: rgba(255, 255, 255, 0)
+
+
+    
