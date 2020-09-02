@@ -4,8 +4,8 @@
   <!-- Basic page needs -->
   <meta charset="utf-8">
   <title>T45, T65, T110... Les différents types de farine de blé</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Les différents types farines de blé correspondent au taux de cendres et donc à la blancheur (ou richesse en son) de celles-ci.">
+  <meta name="author" content="Valérian Ménard - UX/UI/DA">
   <!-- Mobile specific -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Styles -->
@@ -13,6 +13,8 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="alternate icon" href="assets/images/favicon.ico">
+  <!-- Plausible analytics -->
+  <script async defer data-domain="lestypesdefarine.fr" src="https://plausible.io/js/plausible.js"></script>
 </head>
 <body>
   <div class="background-top"></div>
@@ -33,11 +35,60 @@
             </h1>
           </header>
           <p>
-            En France, les farines de blé sont désignées par un "type" qui correspond à leur <a href="#">taux de cendres</a> et donc à leur <strong>degré de raffinage.</strong> <sup><a href="#note-farine">1</a></sup>
+            En France, les farines de blé sont désignées par un "type" qui correspond à leur <a target="_blank" href="https://fr.wikipedia.org/wiki/Farine_de_bl%C3%A9#:~:text=Le%20taux%20de%20cendres%20est,surtout%20contenues%20dans%20le%20son.">taux de cendres</a> et donc à leur <strong>degré de raffinage.</strong> <sup><a href="#note-farine">1</a></sup>
+          </p>
+          <p>
+            <strong>Plus le type est bas, plus la farine est blanche</strong> car elle a été plus raffinée. Elle contient moins de son et de germe des grains de blé et donc moins de cendres.
           </p>
           <p class="wider-bottom-gap">
-            <strong>Plus le type est bas, plus la farine est blanche</strong> car elle a été plus raffinée. Elle contient moins de son et de germe du grain de blé et donc moins de cendres.
+            On peut aussi dire que <strong>les types de farine indiquent leur richesse en son.</strong> Plus le type est élevé plus la farine est riche en son (l'enveloppe du grain) et donc en fibres.
           </p>
+          <h3>
+            Les 6 types de farine de blé homologués en France <sup><a href="#note-types">2</a></sup>
+          </h3>
+          <div class="table-container-borders horizontal-scroll-shadows wider-bottom-gap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Taux de cendres</th>
+                  <th>Description et exemple d'utilisation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="t45-row">
+                  <td>T45</td>
+                  <td>moins de 0,5 %</td>
+                  <td>La farine la plus blanche; adaptée à la patisserie, les pizzas </td>
+                </tr>
+                <tr class="t55-row">
+                  <td>T55</td>
+                  <td>de 0,5 à 0,6 %</td>
+                  <td>Farine blanche; utilisée pour le pain blanc</td>
+                </tr>
+                <tr class="t65-row">
+                  <td>T65</td>
+                  <td>de 0,62 à 0,75 %</td>
+                  <td>Farine blanche; utilisée pour le pain de campagne</td>
+                </tr>
+                <tr class="t80-row">
+                  <td>T80</td>
+                  <td>de 0,75 à 0,9 %</td>
+                  <td>Farine semi-complète; utilisée pour le pain semi-complet</td>
+                </tr>
+                <tr class="t110-row">
+                  <td>T110</td>
+                  <td>de 1 à 1,2 %</td>
+                  <td>Farine complète; utilisée pour le pain complet</td>
+                </tr>
+                <tr class="t150-row">
+                  <td>T150</td>
+                  <td>plus de 1,4 % </td>
+                  <td>Farine intégrale; utilisée pour le pain complet “intégral”</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <h2>
             Des cendres dans la farine ?
           </h2>
@@ -74,7 +125,7 @@
             Pour mesurer à quel point une farine a été blutée (raffinée), <strong>on en fait bruler un échantillon dans un four de laboratoire</strong> <sup><a href="#note-taux-de-cendres">6</a></sup>. Le rapport entre la masse de cendres restantes et la masse de l’échantillon de départ se nomme le <strong>taux de cendres</strong>.
           </p>
           <p class="wider-bottom-gap">
-            Les taux de cendres et de blutage sont liés : plus une farine est blutée, moins il y aura de cendres. En effet, <strong>les matières qui restent après la combustion</strong> (et qui constituent les cendres) <strong>se trouvent en grande partie dans l’enveloppe du blé (le son) et le germe</strong> <sup><a href="#">7</a></sup>. Or ce sont ces parties du grain qui sont retirées de la farine par le blutage.  
+            Les taux de cendres et de blutage sont liés : plus une farine est blutée, moins il y aura de cendres. En effet, <strong>les matières qui restent après la combustion</strong> (et qui constituent les cendres) <strong>se trouvent en grande partie dans l’enveloppe du blé (le son) et le germe</strong> <sup><a href="#cendres">7</a></sup>. Or ce sont ces parties du grain qui sont retirées de la farine par le blutage.  
           </p>
           <p class="boxed-fact important-fact wider-bottom-gap">
             Pour résumer : <strong>de T45 à T65</strong> : farines <strong>blanches</strong>;  Au delà : <strong>de T80 à T150</strong> : farines <strong>semi-complètes ou complètes</strong> !
@@ -113,9 +164,12 @@
             <li id="note-taux-de-cendres">
               Il y a d’autres méthodes de dosage du taux de cendres, comme l’analyse infrarouge par exemple, mais on parle ici de la méthode “par incinération” prescrite par la norme <a href="https://www.boutique.afnor.org/norme/nf-en-iso-2171/cereales-legumineuses-et-produits-derives-dosage-du-taux-de-cendres-par-incineration/article/783957/fa135194">NF EN ISO 2171 Juin 2010</a>.
             </li>
+            <li id="cendres">
+              <a href="assets/downloadables/Mieux-connaitre-la-farine-INBP.pdf">I.N.B.P, Les Nouvelles de la Boulangerie Pâtisserie - Mieux connaître la farine</a>.
+            </li>
           </ol>
           <p class="author-contact wider-bottom-gap">
-            <span>→</span> Une erreur dans cette page ? <a href="#">Contactez le créateur.</a>
+            <span>→</span> Une erreur dans cette page ? <a href="mailto:hello@lestypesdefarine.fr">Envoyez un email à hello@lestypesdefarine.fr</a>.
           </p>
         </div> <!-- / Column 1/1 -->
       </div> <!-- / Columns - 1 column layout -->

@@ -37,9 +37,7 @@ body
   background-color: #FAD376
   font-family: 'Alegreya', serif
   color: #121212
-  transition: background-color 3600ms 1600ms ease-in-out
-
-  //font-family: 'Alegreya Sans', sans-serif
+  transition: background-color 1800ms 800ms ease-in-out
 
 .background-top
   position: absolute
@@ -98,8 +96,8 @@ p
 
   &.fun-fact
     background: #FFE096
-    border: 3px solid rgba(253, 178, 0, 0.5)
-    box-shadow: -4px 4px 0px rgba(103, 100, 255, 0.5)
+    border: 3px solid rgba(253, 178, 0, 1)
+    box-shadow: -4px 4px 0px #1fa85b
 
   &.important-fact
     background: #FFFFFF
@@ -147,6 +145,71 @@ sup
       &::after
         background-color: transparent
 
+.table-container-borders
+  box-sizing: border-box
+  border: 3px solid #fdb200
+  box-shadow: -4px 4px 0px #423fe2, -8px -3px 0px rgba(255, 255, 255, 0.4)
+
+.horizontal-scroll-shadows
+  overflow: auto
+  width: 100%
+  background: linear-gradient(90deg, #fbde99 0%, rgba(255,255,255,0)), linear-gradient(-90deg, #fbde99 0%, rgba(255,255,255,0)) 100% 0, linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2)), linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2)) 100% 0
+  background-repeat: no-repeat
+  background-color: #fbde99
+  background-size: 100px 100%, 100px 100%, 8px 100%, 8px 100%
+  background-attachment: local, local, scroll, scroll
+
+table
+  min-width: 672px
+  font-family: 'Alegreya Sans', sans-serif
+  font-size: 1.125rem
+  font-weight: 400
+  line-height: 32px
+  
+  thead
+    font-weight: 700
+    background-color: rgba(0, 0, 0, 0.02)
+
+    tr
+      th
+        border-top: 1px solid transparent
+
+  tr
+    th,
+    td
+      border: 1px solid rgba(0, 0, 0, 0.08)
+
+      &:first-of-type
+        border-left: 1px solid transparent
+      &:last-of-type
+        border-right: 1px solid transparent
+
+    &.t45-row
+      background-color: rgba(255, 255, 255, 0.24)
+    &.t55-row
+      background-color: rgba(255, 255, 255, 0.20)
+    &.t65-row
+      background-color: rgba(255, 255, 255, 0.16)
+    &.t80-row
+      background-color: rgba(255, 255, 255, 0.12)
+    &.t110-row
+      background-color: rgba(255, 255, 255, 0.08)
+    &.t150-row
+      background-color: rgba(255, 255, 255, 0.04)
+
+    &:last-of-type
+      td
+        border-bottom: 1px solid transparent
+
+  th
+    padding: 6px 14px 5px
+    border-bottom: 1px solid rgb(0, 0, 0, 0.16)
+
+  td
+    padding: 3px 14px 2px
+
+
+
 ol,
 .author-contact
   font-size: 1rem
@@ -160,7 +223,7 @@ ol,
     background-color: rgba(255, 255, 255, 0)
 
     &:target
-      animation: highlight-note 2000ms 700ms
+      animation: highlight-note 1600ms 800ms
 
   a
     display: inline
